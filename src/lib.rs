@@ -16,7 +16,7 @@
 #![doc(html_root_url = "https://docs.rs/proc_macro_warning/0.0.1")]
 #![warn(clippy::pedantic)]
 // Switching this on automatically isn't possible until <https://github.com/rust-lang/rust/issues/54726> lands.
-#![cfg_attr(feature = "nightly", feature(proc_macro_diagnostic))]
+#![cfg_attr(all(feature = "nightly", proc_macro), feature(proc_macro_diagnostic))]
 
 #[cfg(doctest)]
 pub mod readme {
@@ -31,15 +31,15 @@ thread_local! {
 	static WARNINGS: Mutex<Vec<(Span, TokenStream)>> = Mutex::default();
 }
 
-#[cfg(all(feature = "nightly", not(test)))]
+#[cfg(all(feature = "nightly", proc_macro))]
 extern crate proc_macro;
 
-#[cfg(all(feature = "nightly", not(test)))]
+#[cfg(all(feature = "nightly", proc_macro))]
 pub fn warn(span: Span, message: &str) {
 	proc_macro::Diagnostic::spanned(span.unwrap(), proc_macro::Level::Warning, message).emit()
 }
 
-#[cfg(any(not(feature = "nightly"), test))]
+#[cfg(any(not(feature = "nightly"), not(proc_macro)))]
 pub fn warn(span: Span, message: &str) {
 	use proc_macro2::Literal;
 
