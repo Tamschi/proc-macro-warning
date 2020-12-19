@@ -9,11 +9,19 @@ jobs:
   test:
     name: Test
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        rust: [stable, nightly]
     steps:
     - uses: actions/checkout@v2
     - uses: actions-rs/toolchain@v1
+      with:
+        toolchain: ${{matrix.rust}}
+        profile: minimal
     - run: cat CI.toml >> Cargo.toml
-    - run: cargo test --workspace --all-features
+    - run: cargo test +${{matrix.rust}} --workspace
+    - if: ${{matrix.rust == 'nightly'}}
+      run: cargo test +${{matrix.rust}} --workspace --all-features
 
   check:
     name: Check on Rust ${{matrix.rust}}${{format(' ({0})', matrix.target || matrix.os)}}
@@ -51,6 +59,7 @@ jobs:
         toolchain: nightly
     - run: cat CI.toml >> Cargo.toml
     - run: cargo +nightly update -Z minimal-versions
+    - run: cargo +nightly check --lib
     - run: cargo +nightly check --lib --all-features
 
   clippy:
