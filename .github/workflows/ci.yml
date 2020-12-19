@@ -19,9 +19,9 @@ jobs:
         toolchain: ${{matrix.rust}}
         profile: minimal
     - run: cat CI.toml >> Cargo.toml
-    - run: cargo test +${{matrix.rust}} --workspace
+    - run: cargo +${{matrix.rust}} test --workspace
     - if: ${{matrix.rust == 'nightly'}}
-      run: cargo test +${{matrix.rust}} --workspace --all-features
+      run: cargo +${{matrix.rust}} test --workspace --all-features
 
   check:
     name: Check on Rust ${{matrix.rust}}${{format(' ({0})', matrix.target || matrix.os)}}
