@@ -78,10 +78,8 @@ pub fn collect_warning_items() -> TokenStream {
 		.map({
 			let mut count = 0;
 			move |(span, warning_items)| {
-				let mod_ident = Ident::new(
-					&format! {"W{}", count},
-					span.resolved_at(Span::mixed_site()),
-				);
+				// Span::mixed_site() *may* be nicer, but it's not available in Rust 1.40.0.
+				let mod_ident = Ident::new(&format! {"W{}", count}, span);
 				count += 1;
 				quote_spanned! {span=>
 					mod #mod_ident { #warning_items }
