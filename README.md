@@ -1,32 +1,32 @@
-# TODO_CRATE_NAME
+# proc_macro_warning
 
-[![Lib.rs](https://img.shields.io/badge/Lib.rs-*-84f)](https://lib.rs/crates/TODO_CRATE_NAME)
-[![Crates.io](https://img.shields.io/crates/v/TODO_CRATE_NAME)](https://crates.io/crates/TODO_CRATE_NAME)
-[![Docs.rs](https://docs.rs/TODO_CRATE_NAME/badge.svg)](https://docs.rs/crates/TODO_CRATE_NAME)
+[![Lib.rs](https://img.shields.io/badge/Lib.rs-*-84f)](https://lib.rs/crates/proc_macro_warning)
+[![Crates.io](https://img.shields.io/crates/v/proc_macro_warning)](https://crates.io/crates/proc_macro_warning)
+[![Docs.rs](https://docs.rs/proc_macro_warning/badge.svg)](https://docs.rs/crates/proc_macro_warning)
 
 ![Rust 1.40.0](https://img.shields.io/static/v1?logo=Rust&label=&message=1.40.0&color=grey)
-[![CI](https://github.com/Tamschi/TODO_CRATE_NAME/workflows/CI/badge.svg?branch=develop)](https://github.com/Tamschi/TODO_CRATE_NAME/actions?query=workflow%3ACI+branch%3Adevelop)
-![Crates.io - License](https://img.shields.io/crates/l/TODO_CRATE_NAME/0.0.1)
+[![CI](https://github.com/Tamschi/proc_macro_warning/workflows/CI/badge.svg?branch=develop)](https://github.com/Tamschi/proc_macro_warning/actions?query=workflow%3ACI+branch%3Adevelop)
+![Crates.io - License](https://img.shields.io/crates/l/proc_macro_warning/0.0.1)
 
-[![GitHub](https://img.shields.io/static/v1?logo=GitHub&label=&message=%20&color=grey)](https://github.com/Tamschi/TODO_CRATE_NAME)
-[![open issues](https://img.shields.io/github/issues-raw/Tamschi/TODO_CRATE_NAME)](https://github.com/Tamschi/TODO_CRATE_NAME/issues)
-[![open pull requests](https://img.shields.io/github/issues-pr-raw/Tamschi/TODO_CRATE_NAME)](https://github.com/Tamschi/TODO_CRATE_NAME/pulls)
-[![crev reviews](https://web.crev.dev/rust-reviews/badge/crev_count/TODO_CRATE_NAME.svg)](https://web.crev.dev/rust-reviews/crate/TODO_CRATE_NAME/)
+[![GitHub](https://img.shields.io/static/v1?logo=GitHub&label=&message=%20&color=grey)](https://github.com/Tamschi/proc_macro_warning)
+[![open issues](https://img.shields.io/github/issues-raw/Tamschi/proc_macro_warning)](https://github.com/Tamschi/proc_macro_warning/issues)
+[![open pull requests](https://img.shields.io/github/issues-pr-raw/Tamschi/proc_macro_warning)](https://github.com/Tamschi/proc_macro_warning/pulls)
+[![crev reviews](https://web.crev.dev/rust-reviews/badge/crev_count/proc_macro_warning.svg)](https://web.crev.dev/rust-reviews/crate/proc_macro_warning/)
 
-TODO_README_DESCRIPTION
+Custom warnings for procedural macros on stable Rust, with likely upgrade path to proc macro diagnostics.
 
 ## Installation
 
 Please use [cargo-edit](https://crates.io/crates/cargo-edit) to always add the latest version of this library:
 
 ```cmd
-cargo add TODO_CRATE_NAME
+cargo add proc_macro_warning
 ```
 
 ## Example
 
 ```rust
-TODO_EXAMPLE
+// TODO_EXAMPLE
 ```
 
 ## License
@@ -52,7 +52,7 @@ dual licensed as above, without any additional terms or conditions.
 
 ## Versioning
 
-`TODO_CRATE_NAME` strictly follows [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html) with the following exceptions:
+`proc_macro_warning` strictly follows [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html) with the following exceptions:
 
 * The minor version will not reset to 0 on major version changes (except for v1).  
 Consider it the global feature level.
