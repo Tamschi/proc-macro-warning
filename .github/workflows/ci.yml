@@ -37,9 +37,9 @@ jobs:
         profile: minimal
         target: ${{matrix.target}}
     - run: cat CI.toml >> Cargo.toml
-    - run: cargo +${{matrix.rust}} check ${{env.target}} ${{env.workspace}} --no-default-features
     - run: cargo +${{matrix.rust}} check ${{env.target}} ${{env.workspace}}
-    - run: cargo +${{matrix.rust}} check ${{env.target}} ${{env.workspace}} --all-features
+    - if: ${{matrix.rust == 'nightly'}}
+      run: cargo +${{matrix.rust}} check ${{env.target}} ${{env.workspace}} --all-features
 
   minimal-versions:
     name: Minimal Versions

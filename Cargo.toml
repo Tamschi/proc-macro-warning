@@ -27,6 +27,9 @@ is-it-maintained-issue-resolution = { repository = "Tamschi/proc_macro_warning" 
 is-it-maintained-open-issues = { repository = "Tamschi/proc_macro_warning" }
 maintenance = { status = "experimental" }
 
+[features]
+nightly = ["proc-macro2/proc-macro"]
+
 [dev-dependencies]
 cargo-husky = "1.5.0"
 doc-comment = "0.3.3"
@@ -34,5 +37,6 @@ git_info = "0.1.2"
 version-sync = "0.9.1"
 
 [dependencies]
-proc-macro2 = "1.0.24"
+proc-macro2 = { version = "1.0.24", default-features = false }
 quote = "1.0.7"
+rustversion = "1.0.4"
