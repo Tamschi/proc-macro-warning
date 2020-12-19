@@ -7,9 +7,9 @@ Unclear documentation or error messages are considered bugs.
 
 For anything else, please use the ["Custom issue"] template.
 
-[bugs]: https://github.com/Tamschi/proc_macro_warning/issues/new?assignees=&labels=bug&template=bug_report.md&title=
-[feature requests]: https://github.com/Tamschi/proc_macro_warning/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=
-["Custom issue"]: https://github.com/Tamschi/proc_macro_warning/issues/new?assignees=&labels=&template=custom_issue.md&title=
+[bugs]: https://github.com/Tamschi/proc-macro-warning/issues/new?assignees=&labels=bug&template=bug_report.md&title=
+[feature requests]: https://github.com/Tamschi/proc-macro-warning/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=
+["Custom issue"]: https://github.com/Tamschi/proc-macro-warning/issues/new?assignees=&labels=&template=custom_issue.md&title=
 
 ## Pull Requests
 

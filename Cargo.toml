@@ -1,13 +1,13 @@
 [package]
-name = "proc_macro_warning"
+name = "proc-macro-warning"
 version = "0.0.1"
 authors = ["Tamme Schichler <tamme@schichler.dev>"]
 edition = "2018"
 description = "Custom warnings for procedural macros on stable Rust, with likely upgrade path to proc macro diagnostics."
 license = "MIT OR Apache-2.0"
-repository = "https://github.com/Tamschi/proc_macro_warning"
-homepage = "https://github.com/Tamschi/proc_macro_warning/tree/v0.0.1"
-documentation = "https://docs.rs/proc_macro_warning/0.0.1"
+repository = "https://github.com/Tamschi/proc-macro-warning"
+homepage = "https://github.com/Tamschi/proc-macro-warning/tree/v0.0.1"
+documentation = "https://docs.rs/proc-macro-warning/0.0.1"
 keywords = [] # TODO
 categories = [] # TODO
 readme = "README.md"
@@ -23,8 +23,8 @@ include = [
 publish = false
 
 [badges]
-is-it-maintained-issue-resolution = { repository = "Tamschi/proc_macro_warning" }
-is-it-maintained-open-issues = { repository = "Tamschi/proc_macro_warning" }
+is-it-maintained-issue-resolution = { repository = "Tamschi/proc-macro-warning" }
+is-it-maintained-open-issues = { repository = "Tamschi/proc-macro-warning" }
 maintenance = { status = "experimental" }
 
 [features]

@@ -1,6 +1,6 @@
 <!-- markdownlint-disable first-line-heading -->
 
-Thank you for your contribution to the `proc_macro_warning` repository!
+Thank you for your contribution to the `proc-macro-warning` repository!
 
 Before submitting this pull request, please make sure:
 

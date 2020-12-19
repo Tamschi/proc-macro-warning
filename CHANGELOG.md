@@ -1,4 +1,4 @@
-# proc_macro_warning Changelog
+# proc-macro-warning Changelog
 
 <!-- markdownlint-disable no-trailing-punctuation -->
 

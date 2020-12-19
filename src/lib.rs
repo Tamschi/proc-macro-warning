@@ -13,7 +13,7 @@
 //!
 //! Once procedural macro diagnostics are stabilised, this crate will be updated with versions marked deprecated themselves.
 
-#![doc(html_root_url = "https://docs.rs/proc_macro_warning/0.0.1")]
+#![doc(html_root_url = "https://docs.rs/proc-macro-warning/0.0.1")]
 #![warn(clippy::pedantic)]
 // Switching this on automatically isn't possible until <https://github.com/rust-lang/rust/issues/54726> lands.
 #![cfg_attr(all(feature = "nightly", proc_macro), feature(proc_macro_diagnostic))]
