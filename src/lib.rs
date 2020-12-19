@@ -31,15 +31,15 @@ thread_local! {
 	static WARNINGS: Mutex<Vec<(Span, TokenStream)>> = Mutex::default();
 }
 
-#[cfg(feature = "nightly")]
+#[cfg(all(feature = "nightly", proc_macro))]
 extern crate proc_macro;
 
-#[cfg(feature = "nightly")]
+#[cfg(all(feature = "nightly", proc_macro))]
 pub fn warn(span: Span, message: &str) {
 	proc_macro::Diagnostic::spanned(span.unwrap(), proc_macro::Level::Warning, message).emit()
 }
 
-#[cfg(not(feature = "nightly"))]
+#[cfg(any(not(feature = "nightly"), not(proc_macro)))]
 pub fn warn(span: Span, message: &str) {
 	use proc_macro2::Literal;
 
